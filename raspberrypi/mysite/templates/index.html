@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>Toilet Management System</title>
+</head>
+<body>
+  Toilet Management System
+  <br><br>
+
+  {% extends "base.html" %}
+  {% block body %}
+    {{ message }}
+    <hr>
+    <div style="margin-left: 1em; text-indent: -1em;">
+    command help:<br>
+    
+    check<br>
+    knock n（回数:省略可）<br>
+    provoke メッセージ(日本語全角)<br>
+    </div>
+    <br>
+    <form method="get" action="">
+      <label>{{ form.command.label }} {{ form.command }}</label>
+      <input type="submit" value="send">
+    </form>
+    <br>
+    {{ result1 }}
+    {{ result2 }}
+  {% endblock %}
+
+</body>
+</html>
+
+

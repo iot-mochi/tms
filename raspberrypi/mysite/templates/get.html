@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block body %}
+  <form action="" method="get">
+    <label>name:<input type="text" size=20 name="command"></label>
+    <input type="submit" value="send">
+  </form>
+  {% if command %}
+    {{ command }} を送信します
+  {% endif %}
+{% endblock %}
+
